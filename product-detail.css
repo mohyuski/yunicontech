@@ -1,0 +1,258 @@
+/* ===== Product Detail Pages ===== */
+/* Used by: gaming-pc.html, laptops.html, graphics-card.html,
+   processors.html, ram.html, ssd-storage.html */
+
+.detail-header{
+    background:#111827;
+    padding:20px;
+    text-align:center;
+}
+
+.detail-header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.detail-header a{
+    color:white;
+    text-decoration:none;
+}
+
+.detail-header a:hover{
+    color:#00bfff;
+}
+
+.detail-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    padding:30px;
+    gap:50px;
+}
+
+.detail-card{
+    width:280px;
+    background:#161b22;
+    border:1px solid #222;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    transition:.3s;
+    margin:10px;
+}
+
+.detail-card:hover{
+    transform:translateY(-10px);
+    border-color:#00bfff;
+    box-shadow:0 0 20px rgba(0,191,255,0.3);
+}
+
+.detail-card img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.detail-card h2{
+    color:#00bfff;
+    margin:15px 0 10px;
+}
+
+.detail-card p{
+    color:#c9d1d9;
+    margin:4px 0;
+}
+
+.detail-card .price{
+    color:#00bfff;
+    margin-top:15px;
+}
+
+/* ===== Order Now Button ===== */
+
+.order-btn{
+    display:block;
+    width:100%;
+    margin-top:18px;
+    padding:12px 20px;
+    background:#00bfff;
+    color:#000;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.order-btn:hover{
+    background:#009acd;
+    transform:scale(1.03);
+}
+
+
+/* ===== Order Modal (Cash on Delivery) ===== */
+
+.order-modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.75);
+    z-index:2000;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.order-modal.active{
+    display:flex;
+}
+
+.order-modal-content{
+    position:relative;
+    width:100%;
+    max-width:420px;
+    max-height:90vh;
+    overflow-y:auto;
+    background:#161b22;
+    border:1px solid #00bfff;
+    border-radius:15px;
+    padding:35px 30px;
+    box-shadow:0 0 30px rgba(0,191,255,0.35);
+    animation:orderPopIn .25s ease;
+}
+
+@keyframes orderPopIn{
+    from{ transform:scale(.9); opacity:0; }
+    to{ transform:scale(1); opacity:1; }
+}
+
+.order-modal-content h2{
+    color:#00bfff;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.order-product-name{
+    text-align:center;
+    font-size:18px;
+    font-weight:600;
+    color:#fff;
+}
+
+.order-product-price{
+    text-align:center;
+    color:#00bfff;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.order-close{
+    position:absolute;
+    top:14px;
+    right:20px;
+    font-size:26px;
+    color:#c9d1d9;
+    cursor:pointer;
+    line-height:1;
+    transition:.3s;
+}
+
+.order-close:hover{
+    color:#00bfff;
+}
+
+#orderForm label{
+    display:block;
+    margin:14px 0 6px;
+    color:#c9d1d9;
+    font-size:14px;
+}
+
+#orderForm input[type="text"],
+#orderForm input[type="tel"],
+#orderForm textarea{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #333;
+    background:#0d1117;
+    color:#fff;
+    font-family:'Poppins',sans-serif;
+    font-size:14px;
+}
+
+#orderForm textarea{
+    resize:vertical;
+    min-height:70px;
+}
+
+#orderForm input:focus,
+#orderForm textarea:focus{
+    outline:none;
+    border-color:#00bfff;
+}
+
+.payment-label{
+    margin-top:20px !important;
+}
+
+.payment-option{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#0d1117;
+    border:1px solid #00bfff;
+    border-radius:8px;
+    padding:12px 14px;
+}
+
+.payment-option input{
+    accent-color:#00bfff;
+    width:16px;
+    height:16px;
+}
+
+.payment-option label{
+    margin:0;
+    color:#fff;
+    font-weight:500;
+}
+
+.order-submit-btn{
+    width:100%;
+    margin-top:25px;
+    border:none;
+    cursor:pointer;
+}
+
+.order-success{
+    display:none;
+    text-align:center;
+    color:#3ddc84;
+    font-size:15px;
+    line-height:1.7;
+    padding:10px 0;
+}
+
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+    .detail-container{
+        padding:20px;
+        gap:20px;
+    }
+
+    .order-modal-content{
+        padding:25px 20px;
+    }
+
+}

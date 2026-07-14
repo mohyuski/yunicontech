@@ -1,0 +1,333 @@
+/* ===== Google Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0d1117;
+    color:#fff;
+    line-height:1.6;
+}
+
+/* Navbar */
+
+header{
+    background:#111827;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo span{
+    background:#00bfff;
+    color:#000;
+    padding:8px 12px;
+    border-radius:6px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.logo img{
+    height: 120px;
+    width: auto;
+    display: block;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#00bfff;
+}
+
+
+/* Hero */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+    background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    url("images/image1.png");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero-content span{
+    color:#00bfff;
+}
+
+.hero-content p{
+    max-width:650px;
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:#00bfff;
+    color:#000;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#009acd;
+}
+
+/* Sections */
+
+section{
+    width:90%;
+    margin:auto;
+    padding:70px 0;
+}
+
+section h2{
+    text-align:center;
+    color:#00bfff;
+    margin-bottom:30px;
+}
+/* About Preview */
+
+.about-preview p{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    color:#c9d1d9;
+}
+
+
+/* Product Cards */
+
+.product-container,
+.service-container,
+.features{
+    display:grid;
+    grid-template-columns:repeat(2,3fr);
+    gap:20px;
+}
+
+
+.card-img{
+    width:100%;
+    max-width:280px;
+    height:220px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 15px;
+}
+
+
+.card,
+.service-card,
+.features div{
+    background:#161b22;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    border:1px solid #222;
+    transition:.3s;
+}
+
+
+.card:hover,
+.service-card:hover,
+.features div:hover{
+    transform:translateY(-10px);
+    border-color:#00bfff;
+    box-shadow:0 0 20px rgba(0,191,255,0.3);
+}
+
+
+.card h3,
+.service-card h3,
+.features h3{
+    color:#00bfff;
+    margin-bottom:15px;
+}
+
+
+.card p,
+.service-card p,
+.features p{
+    color:#c9d1d9;
+}
+
+
+/* Contact Preview */
+
+.contact-preview{
+    text-align:center;
+    background:#111827;
+    border-radius:20px;
+    padding:50px;
+}
+
+.contact-preview p{
+    margin-bottom:25px;
+}
+
+
+/* Contact Info Box (same style as product cards) */
+
+.contact-info-wrap{
+    display:flex;
+    justify-content:center;
+    padding-top:40px;
+    padding-bottom:60px;
+}
+
+.contact-info-box{
+    text-align:center;
+    max-width:420px;
+    width:100%;
+    margin:auto;
+    margin-bottom:40px;
+    padding:20px;
+    border-radius:15px;
+    background:#161b22;
+    border:1px solid #222;
+    transition:.3s;
+}
+
+.contact-info-box:hover{
+    transform:translateY(-10px);
+    border-color:#00bfff;
+    box-shadow:0 0 20px rgba(0,191,255,0.3);
+}
+
+.contact-info-box h3{
+    color:#00bfff;
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.contact-info-name{
+    font-size:18px;
+    font-weight:600;
+    color:#fff;
+    margin-bottom:8px;
+}
+
+.contact-info-address{
+    color:#c9d1d9;
+    margin-bottom:14px;
+}
+
+.contact-info-line{
+    color:#c9d1d9;
+    font-size:14px;
+    margin:4px 0;
+}
+
+
+/* Footer */
+
+footer{
+    background:#05080d;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+footer h3{
+    color:#00bfff;
+}
+
+footer p{
+    color:#aaa;
+    margin-top:10px;
+}
+
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+
+    .hero-content h1{
+        font-size:35px;
+    }
+
+
+    .hero-content p{
+        font-size:14px;
+    }
+
+
+    .product-container,
+    .service-container,
+    .features{
+        grid-template-columns:1fr;
+    }
+
+
+    section{
+        width:90%;
+        padding:40px 0;
+    }
+
+
+    .contact-preview{
+        padding:30px 20px;
+    }
+
+}
